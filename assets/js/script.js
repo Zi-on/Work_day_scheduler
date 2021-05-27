@@ -3,8 +3,9 @@ var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 
-
-var currentTime = today.format("H")
+var textArea = $("#textArea");
+var saveBtn = $("#Btn");
+var currentTime = today.format("H");
 
 
 function update(){
@@ -72,6 +73,22 @@ if (17 == currentTime) {
   $(".five").addClass("past");
 }
 }
+
+var printSchedule = function(){}
+
+var saveShedule = function(event){
+  event.preventDefault();
+ var text = textArea.val();
+
+ localStorage.setItem("text", JSON.stringify(text));
+ console.log("works")
+}
+
+textArea.on("submit", saveShedule);
+
+
+
+
 update();
 
 
