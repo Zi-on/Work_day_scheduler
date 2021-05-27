@@ -3,8 +3,8 @@ var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 
-var textArea = $("#textArea");
-var saveBtn = $("#Btn");
+var textArea = $(".description");
+var saveBtn = $(".saveBtn");
 var currentTime = today.format("H");
 
 
@@ -74,16 +74,22 @@ if (17 == currentTime) {
 }
 }
 
-var printSchedule = function(){}
+ var lastSchedule = localStorage.getItem("text");
+ $("#textArea9").val().innerHTML = lastSchedule;
+ console.log(lastSchedule);
 
 var saveSchedule = function(){
- var text = textArea.val();
+ var text = $('#textArea9').val();
 
- localStorage.setItem("text",text);
- console.log("works")
+ localStorage.setItem("text", text);
+
 }
 
-textArea.on("submit", saveSchedule);
+saveBtn.on("click", function(){
+  saveSchedule();
+  var hourSaved = $(this).attr("hour");
+  
+})
 
 
 
