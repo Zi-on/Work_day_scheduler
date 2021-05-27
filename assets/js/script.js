@@ -76,15 +76,14 @@ if (17 == currentTime) {
 
 var printSchedule = function(){}
 
-var saveShedule = function(event){
-  event.preventDefault();
+var saveSchedule = function(){
  var text = textArea.val();
 
- localStorage.setItem("text", JSON.stringify(text));
+ localStorage.setItem("text",text);
  console.log("works")
 }
 
-textArea.on("submit", saveShedule);
+textArea.on("submit", saveSchedule);
 
 
 
