@@ -3,7 +3,7 @@ var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 
-var textArea = $(".description");
+
 var saveBtn = $(".saveBtn");
 var currentTime = today.format("H");
 
@@ -74,24 +74,94 @@ if (17 == currentTime) {
 }
 }
 
- var lastSchedule = localStorage.getItem("text");
- $("#textArea9").val().innerHTML = lastSchedule;
- console.log(lastSchedule);
+ 
+ 
 
-var saveSchedule = function(){
- var text = $('#textArea9').val();
+var renderSchedule = function(){
+var nineAmSchedule = localStorage.getItem("9AM").value;
+console.log(nineAmSchedule);
+console.log($("#textArea9"))
 
- localStorage.setItem("text", text);
+} 
 
-}
 
-saveBtn.on("click", function(){
-  saveSchedule();
-  var hourSaved = $(this).attr("hour");
+
+saveBtn.on("click", function(event){
+  var clickBtn = event.target;
+  var textArea = $(clickBtn).parent().siblings()[1].id;
+  var textValue = $(clickBtn).parent().siblings()[1].value;
+
+ 
+  var string = []
+
+  console.log(textArea)
+
+  if (textArea == "textArea9"){
+    console.log("yes9");
+    string.push(textValue);
+    console.log(string);
+    localStorage.setItem("9AM", string);
+  }
+  
+  if (textArea == "textArea10"){
+    console.log("yes10");
+    string.push(textValue);
+    console.log(string);
+    localStorage.setItem("10AM", string);
+  }
+ 
+  if (textArea == "textArea11"){
+    console.log("yes11");
+    string.push(textValue);
+    console.log(string);
+    localStorage.setItem("11AM", string);
+  }
+
+  if (textArea == "textArea12"){
+    console.log("yes12");
+    string.push(textValue);
+    console.log(string);
+    localStorage.setItem("12PM", string);
+  }
+
+  if (textArea == "textArea1"){
+    console.log("yes1");
+    string.push(textValue);
+    console.log(string);
+    localStorage.setItem("1PM", string);
+  }
+
+  if (textArea == "textArea2"){
+    console.log("yes2");
+    string.push(textValue);
+    console.log(string);
+    localStorage.setItem("2PM", string);
+  }
+
+  if (textArea == "textArea3"){
+    console.log("yes3");
+    string.push(textValue);
+    console.log(string);
+    localStorage.setItem("3PM", string);
+  }
+
+  if (textArea == "textArea4"){
+    console.log("yes4");
+    string.push(textValue);
+    console.log(string);
+    localStorage.setItem("4PM", string);
+  }
+  
+  if (textArea == "textArea5"){
+    console.log("yes5");
+    string.push(textValue);
+    console.log(string);
+    localStorage.setItem("5PM", string);
+  }
   
 })
 
-
+renderSchedule();
 
 
 update();
