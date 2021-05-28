@@ -78,7 +78,7 @@ if (17 == currentTime) {
  
 
 var renderSchedule = function(){
-var nineAmSchedule = localStorage.getItem("9AM").value;
+var nineAmSchedule = localStorage.getItem("9AM");
 console.log(nineAmSchedule);
 console.log($("#textArea9"))
 
