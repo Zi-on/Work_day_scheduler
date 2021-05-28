@@ -78,8 +78,25 @@ if (17 == currentTime) {
  
 
 var renderSchedule = function(){
-var nineAmSchedule = localStorage.getItem("9AM");
-console.log(nineAmSchedule);
+var nineAm = localStorage.getItem("9AM");
+var tenAm = localStorage.getItem("10AM");
+var elevenAm = localStorage.getItem("11AM");
+var twelvePm = localStorage.getItem("12PM");
+var onePm = localStorage.getItem("1PM");
+var twoPm = localStorage.getItem("2PM");
+var threePm = localStorage.getItem("3PM");
+var fourPm = localStorage.getItem("4PM");
+var fivePm = localStorage.getItem("5PM")
+$("#textArea9").val(nineAm);
+$("#textArea10").val(tenAm);
+$("#textArea11").val(elevenAm);
+$("#textArea12").val(twelvePm);
+$("#textArea1").val(onePm);
+$("#textArea2").val(twoPm);
+$("#textArea3").val(threePm);
+$("#textArea4").val(fourPm);
+$("#textArea5").val(fivePm);
+
 console.log($("#textArea9"))
 
 } 
