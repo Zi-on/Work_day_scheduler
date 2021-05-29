@@ -1,5 +1,5 @@
 // Current Time
-var today = moment("13", "H");
+var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 var saveBtn = $(".saveBtn");
