@@ -1,8 +1,9 @@
 // Current Time
-var today = moment();
+var today = moment("13", "H");
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 var saveBtn = $(".saveBtn");
+var finishBtn = $(".finishBtn");
 var currentTime = today.format("H");
 
 var textArea9 = $("#textArea9");
@@ -119,6 +120,58 @@ var renderSchedule = function () {
   textArea4.val(fourPm);
   textArea5.val(fivePm);
 };
+finishBtn.on("click", function(event){
+  var clickBtn = event.target;
+  console.log(clickBtn);
+  var textArea = $(clickBtn).parent().siblings()[1].id;
+  console.log(textArea)
+
+  if (textArea == "textArea9") {
+    console.log("yes");
+    localStorage.setItem("9AM", "");
+    textArea9.val("")
+  }
+
+  if (textArea == "textArea10") {
+    localStorage.setItem("10AM", "");
+    textArea10.val("");
+  }
+
+  if (textArea == "textArea11") {
+    localStorage.setItem("11AM", "");
+    textArea11.val("")
+  }
+
+  if (textArea == "textArea12") {
+    localStorage.setItem("12PM", "");
+    textArea12.val("")
+  }
+
+  if (textArea == "textArea1") {
+    localStorage.setItem("1PM", "");
+    textArea1.val("")
+  }
+
+  if (textArea == "textArea2") {
+    localStorage.setItem("2PM", "");
+    textArea2.val("")
+  }
+
+  if (textArea == "textArea3") {
+    localStorage.setItem("3PM", "");
+    textArea3.val("")
+  }
+
+  if (textArea == "textArea4") {
+    localStorage.setItem("4PM", "");
+    textArea4.val("")
+  }
+
+  if (textArea == "textArea5") {
+    localStorage.setItem("5PM", "");
+    textArea5.val("")
+  }
+});
 
 saveBtn.on("click", function (event) {
   var clickBtn = event.target;
