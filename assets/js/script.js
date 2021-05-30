@@ -10,11 +10,11 @@ var textArea9 = $("#textArea9");
 var textArea10 = $("#textArea10");
 var textArea11 = $("#textArea11");
 var textArea12 = $("#textArea12");
-var textArea1 = $("#textArea1");
-var textArea2 = $("#textArea2");
-var textArea3 = $("#textArea3");
-var textArea4 = $("#textArea4");
-var textArea5 = $("#textArea5");
+var textArea13 = $("#textArea1");
+var textArea14 = $("#textArea2");
+var textArea15 = $("#textArea3");
+var textArea16 = $("#textArea4");
+var textArea17 = $("#textArea5");
 
 var textArea = "textArea";
 
