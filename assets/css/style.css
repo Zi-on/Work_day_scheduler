@@ -28,7 +28,9 @@ textarea {
   margin: 0;
 
 }
-
+.description:hover {
+  border: 1px solid red;
+}
 
 .time-block {
   text-align: center;
@@ -40,15 +42,16 @@ textarea {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
+  width: 80vw;
+
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
-  border-right: none;
   text-align: right;
-  width: 100%;
+  width: 10vh;
+  border-left: none;
 }
 
 .past {
