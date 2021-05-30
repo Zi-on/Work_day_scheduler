@@ -178,72 +178,37 @@ saveBtn.on("click", function (event) {
   var textArea = $(clickBtn).parent().siblings()[1].id;
   var textValue = $(clickBtn).parent().siblings()[1].value;
 
-  var string = [];
-
-  console.log(textArea);
 
   if (textArea == "textArea9") {
-    console.log("yes9");
-    string.push(textValue);
-    console.log(string);
-    localStorage.setItem("9AM", string);
+    localStorage.setItem("9AM", textValue);
   }
-
   if (textArea == "textArea10") {
-    console.log("yes10");
-    string.push(textValue);
-    console.log(string);
-    localStorage.setItem("10AM", string);
+    localStorage.setItem("10AM", textValue);
   }
-
   if (textArea == "textArea11") {
-    console.log("yes11");
-    string.push(textValue);
-    console.log(string);
-    localStorage.setItem("11AM", string);
+    localStorage.setItem("11AM", textValue);
   }
-
   if (textArea == "textArea12") {
-    console.log("yes12");
-    string.push(textValue);
-    console.log(string);
-    localStorage.setItem("12PM", string);
+    localStorage.setItem("12PM", textValue);
   }
-
   if (textArea == "textArea1") {
-    console.log("yes1");
-    string.push(textValue);
-    console.log(string);
-    localStorage.setItem("1PM", string);
+    localStorage.setItem("1PM", textValue);
   }
-
   if (textArea == "textArea2") {
-    console.log("yes2");
-    string.push(textValue);
-    console.log(string);
-    localStorage.setItem("2PM", string);
+    localStorage.setItem("2PM", textValue);
   }
-
   if (textArea == "textArea3") {
-    console.log("yes3");
-    string.push(textValue);
-    console.log(string);
-    localStorage.setItem("3PM", string);
+    localStorage.setItem("3PM", textValue);
   }
-
   if (textArea == "textArea4") {
-    console.log("yes4");
-    string.push(textValue);
-    console.log(string);
-    localStorage.setItem("4PM", string);
+    localStorage.setItem("4PM", textValue);
+  }
+  if (textArea == "textArea5") {
+    localStorage.setItem("5PM", textValue);
   }
 
-  if (textArea == "textArea5") {
-    console.log("yes5");
-    string.push(textValue);
-    console.log(string);
-    localStorage.setItem("5PM", string);
-  }
+
+
 });
 
 renderSchedule();
