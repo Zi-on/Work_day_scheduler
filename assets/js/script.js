@@ -16,6 +16,21 @@ var textArea3 = $("#textArea3");
 var textArea4 = $("#textArea4");
 var textArea5 = $("#textArea5");
 
+var textArea = "textArea";
+
+for (var i = 9; i < 18; i++) {
+  console.log("textArea"+[i])
+  if ([i] == currentTime) {
+    $(textArea+[i]).addClass("present");
+  } else if ([i] > currentTime) {
+    $("textArea"+[i]).addClass("future");
+  } else {
+    $("textArea"+[i]).addClass("past");
+}
+
+}
+console.log($("textArea"+[i]))
+/*
 function update() {
   if (9 == currentTime) {
     $(".nine").addClass("present");
@@ -98,7 +113,7 @@ function update() {
     localStorage.setItem("5PM", "");
     textArea5.val("");
   }
-}
+}*/
 
 var renderSchedule = function () {
   var nineAm = localStorage.getItem("9AM");
@@ -120,16 +135,13 @@ var renderSchedule = function () {
   textArea4.val(fourPm);
   textArea5.val(fivePm);
 };
-finishBtn.on("click", function(event){
+finishBtn.on("click", function (event) {
   var clickBtn = event.target;
-  console.log(clickBtn);
   var textArea = $(clickBtn).parent().siblings()[1].id;
-  console.log(textArea)
-
   if (textArea == "textArea9") {
     console.log("yes");
     localStorage.setItem("9AM", "");
-    textArea9.val("")
+    textArea9.val("");
   }
 
   if (textArea == "textArea10") {
@@ -139,37 +151,37 @@ finishBtn.on("click", function(event){
 
   if (textArea == "textArea11") {
     localStorage.setItem("11AM", "");
-    textArea11.val("")
+    textArea11.val("");
   }
 
   if (textArea == "textArea12") {
     localStorage.setItem("12PM", "");
-    textArea12.val("")
+    textArea12.val("");
   }
 
   if (textArea == "textArea1") {
     localStorage.setItem("1PM", "");
-    textArea1.val("")
+    textArea1.val("");
   }
 
   if (textArea == "textArea2") {
     localStorage.setItem("2PM", "");
-    textArea2.val("")
+    textArea2.val("");
   }
 
   if (textArea == "textArea3") {
     localStorage.setItem("3PM", "");
-    textArea3.val("")
+    textArea3.val("");
   }
 
   if (textArea == "textArea4") {
     localStorage.setItem("4PM", "");
-    textArea4.val("")
+    textArea4.val("");
   }
 
   if (textArea == "textArea5") {
     localStorage.setItem("5PM", "");
-    textArea5.val("")
+    textArea5.val("");
   }
 });
 
@@ -177,8 +189,6 @@ saveBtn.on("click", function (event) {
   var clickBtn = event.target;
   var textArea = $(clickBtn).parent().siblings()[1].id;
   var textValue = $(clickBtn).parent().siblings()[1].value;
-
-
   if (textArea == "textArea9") {
     localStorage.setItem("9AM", textValue);
   }
@@ -206,10 +216,7 @@ saveBtn.on("click", function (event) {
   if (textArea == "textArea5") {
     localStorage.setItem("5PM", textValue);
   }
-
-
-
 });
 
 renderSchedule();
-update();
+/*update();*/

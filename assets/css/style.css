@@ -25,10 +25,7 @@ textarea {
   white-space: pre-wrap;
   border:none;
   padding: 0;
-  margin: 0
-  
-
-
+  margin: 0;
 
 }
 
@@ -52,8 +49,6 @@ textarea {
   border-right: none;
   text-align: right;
   width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .past {
