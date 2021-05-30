@@ -95,3 +95,6 @@ textarea {
   transition: all 0.3s ease-in-out;
   background-color: red;
 }
+@media screen and (max-width: 768px) {
+
+}
